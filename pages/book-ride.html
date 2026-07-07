@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIMO | Book Bike Ride</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+header{
+    background:#009688;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.booking-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+}
+
+.booking-card h2{
+    margin-bottom:25px;
+    color:#333;
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box i{
+    position:absolute;
+    top:17px;
+    left:15px;
+    color:#009688;
+}
+
+.input-box input{
+    width:100%;
+    padding:15px 15px 15px 45px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+}
+
+.input-box input:focus{
+    border-color:#009688;
+}
+
+.vehicle-list{
+    display:flex;
+    justify-content:center;
+    margin-top:25px;
+}
+
+.vehicle{
+    width:240px;
+    padding:25px;
+    text-align:center;
+    border:3px solid #009688;
+    border-radius:15px;
+    background:#e8f8f5;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.vehicle:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.vehicle i{
+    font-size:60px;
+    color:#009688;
+    margin-bottom:15px;
+}
+
+.vehicle h3{
+    color:#333;
+    margin-bottom:8px;
+}
+
+.vehicle p{
+    color:#666;
+}
+
+.info-box{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+    background:#f5f5f5;
+    padding:18px;
+    border-radius:10px;
+}
+
+.info-box div{
+    text-align:center;
+}
+
+.info-box h3{
+    color:#009688;
+}
+
+.book-btn{
+    width:100%;
+    padding:15px;
+    margin-top:30px;
+    border:none;
+    border-radius:10px;
+    background:#009688;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.book-btn:hover{
+    background:#00796b;
+}
+
+.map{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+}
+
+.map iframe{
+    width:100%;
+    height:100%;
+    min-height:650px;
+    border:none;
+}
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    padding:20px;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    margin:8px;
+}
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.vehicle{
+    width:100%;
+}
+
+.info-box{
+    flex-direction:column;
+    gap:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">LIMO</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="ride-history.html">My Rides</a>
+
+<a href="wallet.html">Wallet</a>
+
+<a href="profile.html">Profile</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="booking-card">
+
+<h2>Book Your Bike Ride</h2>
+
+<div class="input-box">
+<i class="fa-solid fa-location-dot"></i>
+<input type="text" placeholder="Enter Pickup Location">
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-location-crosshairs"></i>
+<input type="text" placeholder="Enter Drop Location">
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-calendar"></i>
+<input type="date">
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-clock"></i>
+<input type="time">
+</div>
+
+<h3 style="margin-top:20px;">Select Vehicle</h3>
+
+<div class="vehicle-list">
+
+<div class="vehicle">
+
+<i class="fa-solid fa-motorcycle"></i>
+
+<h3>Bike Ride</h3>
+
+<p>Fast • Safe • Affordable</p>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+<div>
+
+<p>Estimated Distance</p>
+
+<h3>12 km</h3>
+
+</div>
+
+<div>
+
+<p>Estimated Time</p>
+
+<h3>25 mins</h3>
+
+</div>
+
+</div>
+
+<button class="book-btn" onclick="window.location.href='login.html'">
+    Book Bike Ride
+</button>
+
+</div>
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=Jaipur&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</body>
+</html>

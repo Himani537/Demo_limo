@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIMO Wallet</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+header{
+    background:#009688;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.wallet-card{
+    background:#fff;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.wallet-card h2{
+    color:#007bff;
+    margin-bottom:15px;
+}
+
+.balance{
+    font-size:45px;
+    color:#28a745;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.actions{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin:25px 0;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.add-btn{
+    background:#28a745;
+    color:#fff;
+}
+
+.withdraw-btn{
+    background:#dc3545;
+    color:#fff;
+}
+
+button:hover{
+    opacity:0.9;
+    transform:scale(1.05);
+}
+
+.history{
+    margin-top:40px;
+    text-align:left;
+}
+
+.history h3{
+    color:#007bff;
+    margin-bottom:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+table th{
+    background:#007bff;
+    color:#fff;
+}
+
+.credit{
+    color:green;
+    font-weight:bold;
+}
+
+.debit{
+    color:red;
+    font-weight:bold;
+}
+
+footer{
+    margin-top:40px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+@media(max-width:700px){
+    .actions{
+        flex-direction:column;
+    }
+
+    .balance{
+        font-size:35px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+   
+
+<div class="logo">LIMO Wallet</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="ride-history.html">My Rides</a>
+
+<a href="support.html">Wallet</a>
+
+<a href="profile.html">Profile</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="wallet-card">
+
+<h2>Available Balance</h2>
+
+<div class="balance" id="balance">
+₹500
+</div>
+
+<div class="actions">
+
+<!-- <button class="add-btn" onclick="addMoney()">
+Add Money
+</button> -->
+
+<button class="withdraw-btn" onclick="withdrawMoney()">
+Withdraw
+</button>
+
+</div>
+
+<div class="history">
+
+<h3>Recent Transactions</h3>
+
+<table>
+
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th>Amount</th>
+</tr>
+
+<tr>
+<td>28 Jun 2026</td>
+<td class="credit">Added</td>
+<td>+ ₹300</td>
+</tr>
+
+<tr>
+<td>27 Jun 2026</td>
+<td class="debit">Ride Payment</td>
+<td>- ₹150</td>
+</tr>
+
+<tr>
+<td>26 Jun 2026</td>
+<td class="credit">Cashback</td>
+<td>+ ₹100</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 LIMO | Ride Smarter • Faster • Safer
+</footer>
+
+<script>
+let balance = 500;
+
+function updateBalance() {
+    document.getElementById("balance").innerHTML = "₹" + balance;
+}
+
+// function addMoney() {
+//     let amount = prompt("Enter amount to add:");
+
+//     if (amount && !isNaN(amount)) {
+//         balance += Number(amount);
+//         updateBalance();
+//         alert("₹" + amount + " added successfully.");
+//     }
+// }
+
+function withdrawMoney() {
+    let amount = prompt("Enter withdrawal amount:");
+
+    if (amount && !isNaN(amount)) {
+
+        if (Number(amount) <= balance) {
+            balance -= Number(amount);
+            updateBalance();
+            alert("₹" + amount + " withdrawn successfully.");
+        } else {
+            alert("Insufficient Balance!");
+        }
+
+    }
+}
+</script>
+
+</body>
+</html>

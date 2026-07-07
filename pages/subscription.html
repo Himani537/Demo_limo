@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIMO | Subscription</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+/* Header */
+
+header{
+background:#009688;
+color:white;
+padding:18px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:40px auto;
+}
+
+/* Hero */
+
+.hero{
+background:linear-gradient(135deg,#009688,#00b894);
+color:white;
+padding:50px 20px;
+border-radius:20px;
+text-align:center;
+margin-bottom:40px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+/* Plan Card */
+
+.plan-card{
+background:white;
+border-radius:20px;
+padding:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.left{
+text-align:center;
+border-right:1px solid #eee;
+padding-right:20px;
+}
+
+.price{
+font-size:60px;
+color:#009688;
+font-weight:700;
+margin:20px 0;
+}
+
+.price span{
+font-size:20px;
+color:#666;
+}
+
+.badge{
+display:inline-block;
+background:#009688;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.left h2{
+margin-bottom:10px;
+color:#333;
+}
+
+.buy-btn{
+margin-top:25px;
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#009688;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+.buy-btn:hover{
+background:#00796b;
+}
+
+.right h2{
+margin-bottom:20px;
+color:#333;
+}
+
+.features{
+list-style:none;
+}
+
+.features li{
+margin:15px 0;
+font-size:16px;
+color:#555;
+}
+
+.features i{
+color:#009688;
+margin-right:10px;
+}
+
+/* Status */
+
+.status{
+margin-top:30px;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.active{
+background:#d4edda;
+color:#155724;
+padding:8px 15px;
+border-radius:20px;
+font-weight:600;
+}
+
+/* FAQ */
+
+.faq{
+margin-top:40px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.faq h2{
+margin-bottom:20px;
+color:#009688;
+}
+
+.question{
+margin-bottom:20px;
+}
+
+.question h4{
+margin-bottom:8px;
+color:#333;
+}
+
+.question p{
+color:#666;
+}
+
+/* Footer */
+
+footer{
+margin-top:40px;
+background:#009688;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+padding:20px;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+margin:8px;
+}
+
+.plan-card{
+grid-template-columns:1fr;
+}
+
+.left{
+border-right:none;
+border-bottom:1px solid #eee;
+padding-bottom:20px;
+padding-right:0;
+}
+
+.status{
+flex-direction:column;
+gap:15px;
+text-align:center;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.price{
+font-size:50px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">LIMO</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="pages/book-ride.html">Book Ride</a>
+
+<a href="offers.html">Offers</a>
+
+<a href="profile.html">Profile</a>
+
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="hero">
+
+<h1>LIMO Bike Subscription</h1>
+
+<p>Ride more and save more with our affordable subscription plan.</p>
+
+</div>
+
+<div class="plan-card">
+
+<div class="left">
+
+<div class="badge">
+Most Popular
+</div>
+
+<h2>Bike Subscription</h2>
+
+<div class="price">
+
+₹125
+
+<span>/ Month</span>
+
+</div>
+
+<p>Get access to affordable bike rides every month.</p>
+
+<button class="buy-btn">
+
+Buy Subscription
+
+</button>
+
+</div>
+
+<div class="right">
+
+<h2>Plan Benefits</h2>
+
+<ul class="features">
+
+<li><i class="fa-solid fa-circle-check"></i>50 Bike Rides Included</li>
+
+<li><i class="fa-solid fa-circle-check"></i>Priority Ride Booking</li>
+
+<li><i class="fa-solid fa-circle-check"></i>Exclusive Member Discounts</li>
+
+<li><i class="fa-solid fa-circle-check"></i>Special Festival Offers</li>
+
+<li><i class="fa-solid fa-circle-check"></i>24×7 Customer Support</li>
+
+<li><i class="fa-solid fa-circle-check"></i>No Hidden Charges</li>
+
+<li><i class="fa-solid fa-circle-check"></i>Wallet Cashback Offers</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="status">
+
+<div>
+
+<h3>Current Subscription</h3>
+
+<p>Bike Subscription Plan</p>
+
+</div>
+
+<div class="active">
+
+Active
+
+</div>
+
+</div>
+
+<div class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="question">
+
+<h4>How many rides are included?</h4>
+
+<p>You can enjoy up to <strong>50 bike rides</strong> under this monthly subscription plan.</p>
+
+</div>
+
+<div class="question">
+
+<h4>Can I renew my subscription?</h4>
+
+<p>Yes. You can renew your subscription every month from your profile or wallet.</p>
+
+</div>
+
+<div class="question">
+
+<h4>Can I cancel anytime?</h4>
+
+<p>Yes. You may cancel your subscription, but the fee already paid is non-refundable.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 LIMO | LiftPls Mobility Pvt. Ltd.
+
+</footer>
+
+</body>
+</html>

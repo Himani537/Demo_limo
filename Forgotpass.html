@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIMO - Forgot Password</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#007bff,#00c6ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:380px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.logo{
+    text-align:center;
+    font-size:34px;
+    font-weight:bold;
+    color:#007bff;
+    margin-bottom:10px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:10px;
+    color:#333;
+}
+
+p{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+    font-size:15px;
+}
+
+.input-box{
+    margin-bottom:20px;
+}
+
+.input-box label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#444;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.input-box input:focus{
+    border-color:#007bff;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:13px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+.links{
+    text-align:center;
+    margin-top:20px;
+}
+
+.links a{
+    text-decoration:none;
+    color:#007bff;
+    font-weight:bold;
+}
+
+.links a:hover{
+    text-decoration:underline;
+}
+
+.message{
+    display:none;
+    margin-top:20px;
+    padding:12px;
+    background:#d4edda;
+    color:#155724;
+    border-radius:8px;
+    text-align:center;
+}
+
+@media(max-width:450px){
+    .container{
+        width:90%;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="logo">
+🚴 LIMO
+</div>
+
+<h2>Forgot Password</h2>
+
+<p>
+Enter your registered email address and we'll send you a password reset link.
+</p>
+
+<form onsubmit="sendLink(event)">
+
+<div class="input-box">
+<label>Email Address</label>
+<input type="email" id="email" placeholder="Enter your email" required>
+</div>
+
+<button type="submit">
+Send Reset Link
+</button>
+
+</form>
+
+<div class="message" id="successMessage">
+✅ Password reset link has been sent to your email.
+</div>
+
+<div class="links">
+<p>
+<a href="pages/login.html">← Back to Login</a>
+</p>
+</div>
+
+</div>
+
+<script>
+function sendLink(event){
+
+event.preventDefault();
+
+const email=document.getElementById("email").value;
+
+if(email===""){
+alert("Please enter your email.");
+return;
+}
+
+document.getElementById("successMessage").style.display="block";
+
+document.querySelector("form").reset();
+
+}
+</script>
+
+</body>
+</html>
+
+
+
+<!-- <a href="pages/Forgotpass.html">
+    Forgot Password?
+</a> -->
